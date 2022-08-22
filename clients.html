@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Project Nerds</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page-body">
+    <header class="main-header">
+        <nav class="main-navigation container">
+            <a class="main-header-logo" href="index.html">
+                <img src="img/nerds-logos/nerds-logo.svg" width="160" height="65" alt="Логотип компании Нердс">
+            </a>
+            <ul class="site-navigation">
+                <li><a href="index.html">СТУДИЯ</a></li>
+                <li><a class="active-page" href="clients.html">КЛИЕНТЫ</a></li>
+                <li><a href="catalog.html">МАГАЗИН</a></li>
+                <li><a href="contacts.html">КОНТАКТЫ</a></li>
+            </ul>
+            <div class="user-navigation">
+                <a class="cart-link" href="#">
+                    КОРЗИНА
+                </a>
+            </div>
+        </nav>
+        <h1 class="catalog-page-headline headline">Наши клиенты:</h1>
+    </header>
+    <main>
+        <section class="clients">
+            <h2 class="invisible">Наши клиенты</h2>
+            <ul class="client-list">
+                <li class="client-item client-svg"><a href="https://htmlacademy.ru/intensive/htmlcss"><img
+                            src="img/partners/logo_htmlacademy.svg" width="199" height="57" alt="Лого HTML Academy"></a>
+                </li>
+                <li class="client-item"><a href="#"><img src="img/partners/logo_borodinski.png" width="209"
+                            height="90" alt="Лого Borodinski"></a></li>
+                <li class="client-item"><a href="#"><img src="img/partners/logo_pink.png" width="182"
+                            height="52" alt="Лого Pink"></a></li>
+                <li class="client-item"><a href="#"><img src="img/partners/logo_mishka.png" width="173"
+                            height="84" alt="Лого Mishka"></a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <h2 class="invisible">Наши контакты</h2>
+        <div class="footer-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.837890114063!2d30.31504403679041!3d59.96801249815569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696314db404b36b%3A0x1d934f1978240bba!2zTtGRcmRz!5e0!3m2!1sru!2sru!4v1659192892884!5m2!1sru!2sru"
+                width="1440" height="416" style="border:0;" allowfullscreen
+                title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
+            <section class="footer-contacts">
+                <h3 class="invisible">Адрес офиса</h3>
+                <p class="footer-name">NЁRDS DESIGN STUDIO</p>
+                <p class="footer-adress">наб. Реки Карповки,<br>
+                    5 лит П, Санкт-Петербург<br>
+                    <br>
+                    <a class="footer-tel" href="tel:">+7 800 555-86-28</a>
+                </p>
+                <p><a class="button footer-button" href="contacts.html">НАПИШИТЕ НАМ</a></p>
+            </section>
+            <div class="map-pointer"></div>
+        </div>
+        <div class="underthemap container">
+            <ul class="social-list">
+                <li class="social-item social-vk"><a href="#">ВКонтакте</a></li>
+                <li class="social-item social-fb"><a href="#">Facebook</a></li>
+                <li class="social-item social-ig"><a href="#">Instagram</a></li>
+            </ul>
+            <div class="friendship">
+                <p class="friendship-headline headline">Давайте дружить, это выгодно!</p>
+                <p class="friendship-discount">Скидка 10% для друзей из социальных сетей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <section class="contacts-form-pop-up cutout">
+        <p class="headline pop-up-headline">Напишите нам</p>
+        <button class="pop-up-close-button" type="button">Закрыть окно</button>
+        <form class="pop-up-form" method="get" action="https://echo.htmlacademy.ru">
+            <p>
+                <label for="name-form">Ваше имя:</label>
+                <input class="name-form" type="text" name="pop-up-name" id="name-form" placeholder="Имя Фамилия">
+            </p>
+            <p>
+                <label for="email-form">Ваш email:</label>
+                <input class="email-form" type="email" name="pop-up-email" id="email-form"
+                    placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="text-form">Текст письма:</label>
+                <textarea class="text-form" rows="6" name="pop-up-text" id="text-form"
+                    placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button pop-up-button" type="submit"
+                aria-label="Отправить заполненные поля">Отправить</button>
+        </form>
+    </section>
+
+    <script src="js/popup.js"></script>
+
+</body>
+
+</html>
