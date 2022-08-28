@@ -47,7 +47,7 @@
 }
 
 body {
-    width: 1440px;
+    min-width: 1440px;
     margin: 0 auto;
     padding: 0;
     font-family: "Roboto", Arial, sans-serif;
@@ -69,15 +69,6 @@ img {
     height: auto;
 }
 
-h1,
-h2,
-h3 {
-    color: var(--basic-black);
-}
-
-button {
-    border: none;
-}
 
 .invisible {
     position: absolute;
@@ -109,6 +100,7 @@ button {
     color: var(--basic-white);
     text-transform: uppercase;
     display: inline-block;
+    vertical-align: middle;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 50px;
@@ -146,21 +138,15 @@ button {
 
 .main-navigation {
 
+    text-transform: uppercase;
     color: var(--basic-black);
     background-color: var(--basic-grey);
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: start;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -187,18 +173,10 @@ button {
     margin-right: 24px;
     padding: 0;
     min-width: 435px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     row-gap: 20px;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
+    column-gap: 45px;
 }
 
 .site-navigation a {
@@ -284,10 +262,14 @@ button {
 .slider {
     position: relative;
     overflow: hidden;
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slider-controls {
     position: absolute;
+    bottom:0;
 }
 
 .slider input {
@@ -296,31 +278,34 @@ button {
     height: 17px;
     border-radius: 50%;
     border: 2px solid brown;
+    bottom: 0px;
     z-index: 1;
 }
 
 .slider .slide-1 {
-    top: 309px;
-    left: 676px;
+    bottom: 97px;
+    left: 536px;
 }
 
 .slider .slide-2 {
-    top: 309px;
-    left: 711px;
+    bottom: 97px;
+    left: 570px;
 }
 
 .slider .slide-3 {
-    top: 309px;
-    left: 746px;
+    bottom: 97px;
+    left: 605px;
 }
 
 .slider-controls label {
     position: relative;
     display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
     width: 18px;
     height: 18px;
-    top: 308px;
-    left: 676px;
+    bottom: 90px;
+    left: 536px;
     margin-right: 13px;
     background-color: white;
     border-radius: 50%;
@@ -341,23 +326,26 @@ button {
 }
 
 #btn-2:checked ~ .slides-in-row {
-    transform: translate(-1440px);
+    transform: translate(-1160px);
 }
 
 #btn-3:checked ~ .slides-in-row {
-    transform: translate(-2880px);
+    transform: translate(-2320px);
 }
 
 #btn-1:checked ~ .slides-in-row .features .button-slide-1 {
     display: inline-block;
+    vertical-align: middle;
 }
 
 #btn-2:checked ~ .slides-in-row .features .button-slide-2 {
     display: inline-block;
+    vertical-align: middle;
 }
 
 #btn-3:checked ~ .slides-in-row .features .button-slide-3 {
     display: inline-block;
+    vertical-align: middle;
 }
 
 
@@ -382,10 +370,10 @@ button {
 
 
 .features {
+    position: relative;
     min-height: 423px;
-    width: 1440px;
+    width: 1160px;
     padding: 0;
-    padding-left: 140px;
     margin-top: 0px;
     background-color: var(--basic-grey);
     display: block;
@@ -396,27 +384,27 @@ button {
 .feature-1 {
     background-image: url("../img/slider/slide1-phones.png");
     background-repeat: no-repeat;
-    background-position: top -8px right 143px;
+    background-position: top -8px right 4px;
 }
 
 .feature-2 {
 
     background-image: url("../img/slider/slide2-mones.png");
     background-repeat: no-repeat;
-    background-position: top -8px right 143px;
+    background-position: top -8px right 4px;
 }
 
 .feature-3 {
 
     background-image: url("../img/slider/slide3-tabs.png");
     background-repeat: no-repeat;
-    background-position: top -8px right 143px;
+    background-position: top -8px right 4px;
     
 }
 
 
 .features .feature-headline {
-    max-width: 700px;
+    width: 520px;
     margin: 0;
     padding: 0;
     padding-bottom: 24px;
@@ -427,16 +415,25 @@ button {
 }
 
 .features .feature-text {
-    max-width: 700px;
+    width: 520px;
     margin: 0;
     padding: 0;
     line-height: 25px;
-    margin-bottom: 38px;
 }
 
-.features .feature-button {
+.features .feature-text+p {
     margin: 0;
-    margin-bottom: 40px;
+    padding: 0;
+    margin-bottom: 150px;
+    width: 520px;
+}
+
+
+.features .feature-button {
+    position: absolute;
+    bottom: 80px;
+    margin: 0;
+    margin-bottom: 0px;
     min-width: 240px;
     max-width: 520px;
     display: none;
@@ -488,6 +485,7 @@ button {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
+    text-transform: uppercase;
 }
 
 .service-item p {
@@ -632,6 +630,7 @@ button {
 
 .achievement-amount span {
     display: inline-block;
+    vertical-align: top;
     position: absolute;
     font-size: 26px;
     line-height: 40px;
@@ -700,7 +699,8 @@ button {
     right: 0;
 }
 
-.client-item:last-of-type::after {
+.client-item:last-of-type::after,
+.client-item:nth-of-type(4)::after {
     display: none;
 }
 
@@ -722,15 +722,27 @@ button {
 
 /*                Footer                */
 
+.main-footer {
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+}
+
+
 .footer-map {
+    grid-column: 1/-1;
     width: 1440px;
     min-height: 416px;
     margin: 0 auto;
     padding: 0;
-    background: url("../img/map.png") no-repeat;
+    background: url("../img/map&marker.png") no-repeat;
     display: block;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 70px;
     position: relative;
     z-index: 0;
@@ -763,6 +775,7 @@ button {
 .footer-name {
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
     margin-bottom: 21px;
     color: var(--basic-black);
     font-size: 18px;
@@ -770,13 +783,26 @@ button {
     line-height: 30px;
 }
 
+
+
 .footer-adress {
     color: var(--adress-text-light-grey);
     line-height: 18px;
-    margin-bottom: 40px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer-adress + p {
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    padding-bottom: 18px;
 }
 
 .footer-tel {
+    display: block;
+    margin-bottom: 38px;
     font-family: inherit;
     font-size: inherit;
     line-height: 18px;
@@ -789,28 +815,19 @@ button {
     max-width: 100%;
 }
 
-.map-pointer {
-    width: 190px;
-    height: 190px;
-    background: url("../img/nerds-logos/map-marker.png") no-repeat;
-    position: absolute;
-    top: 70px;
-    left: 848px;
-    z-index: 0;
-}
 
-
-.underthemap {
+/*.underthemap {
     margin-bottom: 70px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 140px 1fr;
     grid-template-columns: auto 1fr;
     gap: 140px;
-}
+}*/
 
 .social-list {
     margin: 0;
+    margin-left: 140px;
     padding: 0;
     list-style: none;
     display: -ms-grid;
@@ -876,6 +893,7 @@ button {
 
 .friendship {
     padding-top: 5px;
+    margin-left: 140px;
 }
 
 .friendship-headline {
@@ -950,6 +968,7 @@ button {
 
 .pop-up-close-button {
     display: block;
+    border: none;
     font-size: 0;
     width: 21px;
     height: 21px;
@@ -1064,6 +1083,7 @@ button {
 .pop-up-button {
     min-width: 260px;
     cursor: pointer;
+    border: none;
 }
 
 .form-error {
@@ -1113,6 +1133,7 @@ button {
 
 .catalog-page-headline {
     display: block;
+    text-transform: none;
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
@@ -1170,6 +1191,8 @@ button {
     background-color: var(--basic-grey);
     color: var(--basic-black);
     text-transform: uppercase;
+    cursor: pointer;
+    border: none;
     width: 100%;
 }
 
@@ -1354,6 +1377,7 @@ legend {
 .filter-radio-list li label {
     padding-left: 35px;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -1417,6 +1441,7 @@ legend {
 .filter-checkbox-list li label {
     padding-left: 35px;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -1658,6 +1683,7 @@ legend {
     bottom: 0;
     width: 360px;
     min-height: 230px;
+    max-height: 580px;
     text-align: center;
     padding: 55px;
     padding-top: 24px;
@@ -1698,6 +1724,7 @@ legend {
 .catalog-item-description h3 {
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
 }
 
 .catalog-item-description h3 a {
@@ -1730,6 +1757,8 @@ legend {
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    max-height: 500px;
+    overflow: auto;
 }
 
 .catalog-item-description a {
